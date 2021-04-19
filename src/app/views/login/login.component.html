@@ -8,14 +8,16 @@
                 </div>
                 <div class="p-col-12">
                     <label for="">Usuario: </label>
-                    <input type="text" pInputText class="p-col-12" />
+                    <!-- O ngModel é para preencher o objeto de requisição com os dados vindos desse formulário -->
+                    <input [(ngModel)]="requestLogin.login" type="text" pInputText class="p-col-12" />
                 </div>
                 <div class="p-col-12">
                     <label for="">Senha: </label>
-                    <input type="text" pInputText class="p-col-12" />
+                    <input [(ngModel)]="requestLogin.password" type="password" pInputText class="p-col-12" />
                 </div>
                 <div class="p-col-12">
-                    <button pButton type="button" label="Entrar" class="p-col-12"></button>
+                    <!-- o click é um evento em que é invocado esse metodo ao ser clicado -->
+                    <button (click)="doLogin()" pButton type="button" label="Entrar" class="p-col-12"></button>
                 </div>
             </div>
         </p-card>
